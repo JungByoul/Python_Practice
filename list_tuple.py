@@ -89,3 +89,49 @@ for elem in a:
         val = elem
 
 
+a = [38,21,53, 62,19]
+max_data = a[0]
+min_data = a[0]
+for i in a:
+    if i > max_data:
+        max_data = 1
+    if i < min_data:
+        min_data = i
+        
+print ("Max Data =", max_data, "Min Data =", min_data)
+
+
+#리스트 표현식
+a = [i for i in range(10)]
+
+x = [i for i in range(5, 15) if i % 2 == 0]
+print(x)
+
+#리스트 표현식- 중첩된 for문: 구구단!
+nums = [i * j for i in range(2, 10) for j in range(1,10)]
+
+#리스트 표현식 응용
+a = ['alpha', 'bravo', 'charlie' , 'delta', 'echo', 'foxtrot'
+, 'golf', 'hotel', 'india']
+
+b = [elem for elem in a if len(elem) == 5]
+print (b)
+
+
+#예제
+x, y = list(map(int, input().split()))
+
+if (x < 1 or x > 20):
+    print ("1st data range error")
+elif (y < 10 or y > 30):
+    print ("2nd data range error")
+elif (x >= y):
+    print("Data input range error")
+else:
+    nums = [2**i for i in range(x, y+1)]
+    del nums[1]
+    del nums[len(nums) -2]
+    print(nums)
+
+
+
