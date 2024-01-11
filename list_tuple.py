@@ -134,4 +134,56 @@ else:
     print(nums)
 
 
+ai_classes = {
+    'class01' : [
+               {'name' : '서준', 'age' : 24},
+               {'name' : '하준', 'age' : 34},
+               {'name' : '도윤', 'age' : 37},
+               {'name' : '시윤', 'age' : 19},
+               {'name' : '은우', 'age' : 31}
+    ],
+    'class02' : [
+                 {'name' : '지호', 'age' : 34},
+                 {'name' : '예준', 'age' : 19},
+                 {'name' : '동원', 'age' : 21},
+                 {'name' : '민정', 'age' : 22},
+                 {'name' : '효주', 'age' : 24}
+    ]
+}
 
+for class_num in ai_classes:
+    for i in range(5):
+        if ai_classes[class_num][i]['age']>=30:
+            print(ai_classes[class_num][i]['name'],':' , ai_classes[class_num][i]['age'] ,end=' / ')
+
+
+#2차원 배열
+a =[[10, 20], [30, 40], [50, 60]]
+for aa in a:
+    for aaa in aa:
+        print(aaa, end =' ')
+    print()
+
+#for문으로 2차원 배열 만들기
+a= []
+for i in range(3):
+    a.append([])
+    for j in range(2):
+        a[i].append(0)
+print(a)
+
+#간단히 압축. 리스트 표현식으로.
+a = [[0 for j in range(2)] for i in range(3)]
+
+
+
+#formating
+a, b = map(int, input().split())
+t = a + b
+print('{} + {} = {} 입니다'. format (a,b,t))
+
+
+language = "Python"
+version = 3.6
+
+print(f"hello, {language} verison {version}")
